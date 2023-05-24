@@ -1,0 +1,97 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "URL Shortener",
+        "description": "URL Shortener - Application - Portfolio",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Short Url"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/shorturl": {
+            "post": {
+                "tags": [
+                    "Short Url"
+                ],
+                "description": "Save a url",
+                "parameters": [
+                    {
+                        "name": "",
+                        "in": "body",
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/ShortUrlPayload"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "New short url is created",
+                        "schema": {
+                            "$ref": "#/definitions/ShortUrlResponse"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/shorturl/:url": {
+            "get": {
+                "tags": [
+                    "Short Url"
+                ],
+                "summary": "Redirect Short Url in system",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/ShortUrlResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ShortUrlPayload": {
+            "required": [
+                "url"
+            ],
+            "properties": {
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
+        "ShortUrlResponse": {
+            "properties": {
+                "originalUrl": {
+                    "type": "string"
+                },
+                "shortUrl": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
