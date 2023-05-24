@@ -1,6 +1,6 @@
 # URL Shortener Microservice
 
-This is a backend microservice that provides URL shortening functionality. It allows users to shorten long URLs into shorter, more manageable links. This microservice is built using [insert programming language/framework here] and utilizes a [insert database system here] for storing and retrieving shortened URLs.
+This is a backend microservice that provides URL shortening functionality. It allows users to shorten long URLs into shorter, more manageable links. This microservice is built using JavaScript, Node.js, Express.js and utilizes a Database not relationship like MongoDB for storing and retrieving shortened URLs.
 
 ## Getting Started
 
@@ -8,7 +8,9 @@ To get started with the URL Shortener Microservice, follow the instructions belo
 
 ## Prerequisites
 
-* [insert prerequisites here, e.g., Node.js, MongoDB]
+* [Node.js](https://nodejs.org/en)
+* [Express.js](https://expressjs.com/)
+* [MongoDB](https://www.mongodb.com/)
 
 ## Installation
 
