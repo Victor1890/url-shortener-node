@@ -6,7 +6,7 @@ router.use("/api", require("./api"))
 router.use("/docs", swaggerUI.serve, swaggerUI.setup(require(`${process.cwd()}/public/docs/swagger.json`)))
 
 router.get("/", (_, res) => {
-    return res.sendFile(process.cwd() + "/src/views/index.html");
+    return res.sendFile(process.cwd() + "/views/index.html");
 })
 
 module.exports = router;
